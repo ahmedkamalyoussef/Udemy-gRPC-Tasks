@@ -1,3 +1,15 @@
 syntax = "proto3";
 package Prime;
 
+message Argument{
+  int32 number =1;
+}
+message NumberRequest{
+  Argument argument=1;
+}
+message PrimesResponse{
+  int32 result=1;
+}
+service PrimesService{
+  rpc Primes (NumberRequest)  returns (stream PrimesResponse){} 
+}

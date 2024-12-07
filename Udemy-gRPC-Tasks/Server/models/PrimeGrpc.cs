@@ -8,9 +8,9 @@
 using grpc = global::Grpc.Core;
 
 namespace Prime {
-  public static partial class SumService
+  public static partial class PrimesService
   {
-    static readonly string __ServiceName = "Prime.SumService";
+    static readonly string __ServiceName = "Prime.PrimesService";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -46,17 +46,17 @@ namespace Prime {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Prime.SumRequest> __Marshaller_Prime_SumRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Prime.SumRequest.Parser));
+    static readonly grpc::Marshaller<global::Prime.NumberRequest> __Marshaller_Prime_NumberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Prime.NumberRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Prime.SumResponse> __Marshaller_Prime_SumResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Prime.SumResponse.Parser));
+    static readonly grpc::Marshaller<global::Prime.PrimesResponse> __Marshaller_Prime_PrimesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Prime.PrimesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Prime.SumRequest, global::Prime.SumResponse> __Method_Sum = new grpc::Method<global::Prime.SumRequest, global::Prime.SumResponse>(
-        grpc::MethodType.Unary,
+    static readonly grpc::Method<global::Prime.NumberRequest, global::Prime.PrimesResponse> __Method_Primes = new grpc::Method<global::Prime.NumberRequest, global::Prime.PrimesResponse>(
+        grpc::MethodType.ServerStreaming,
         __ServiceName,
-        "Sum",
-        __Marshaller_Prime_SumRequest,
-        __Marshaller_Prime_SumResponse);
+        "Primes",
+        __Marshaller_Prime_NumberRequest,
+        __Marshaller_Prime_PrimesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -64,80 +64,70 @@ namespace Prime {
       get { return global::Prime.PrimeReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of SumService</summary>
-    [grpc::BindServiceMethod(typeof(SumService), "BindService")]
-    public abstract partial class SumServiceBase
+    /// <summary>Base class for server-side implementations of PrimesService</summary>
+    [grpc::BindServiceMethod(typeof(PrimesService), "BindService")]
+    public abstract partial class PrimesServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Prime.SumResponse> Sum(global::Prime.SumRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task Primes(global::Prime.NumberRequest request, grpc::IServerStreamWriter<global::Prime.PrimesResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
-    /// <summary>Client for SumService</summary>
-    public partial class SumServiceClient : grpc::ClientBase<SumServiceClient>
+    /// <summary>Client for PrimesService</summary>
+    public partial class PrimesServiceClient : grpc::ClientBase<PrimesServiceClient>
     {
-      /// <summary>Creates a new client for SumService</summary>
+      /// <summary>Creates a new client for PrimesService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public SumServiceClient(grpc::ChannelBase channel) : base(channel)
+      public PrimesServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for SumService that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for PrimesService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public SumServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public PrimesServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected SumServiceClient() : base()
+      protected PrimesServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected SumServiceClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected PrimesServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Prime.SumResponse Sum(global::Prime.SumRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Prime.PrimesResponse> Primes(global::Prime.NumberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return Sum(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return Primes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Prime.SumResponse Sum(global::Prime.SumRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::Prime.PrimesResponse> Primes(global::Prime.NumberRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_Sum, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Prime.SumResponse> SumAsync(global::Prime.SumRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return SumAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Prime.SumResponse> SumAsync(global::Prime.SumRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_Sum, null, options, request);
+        return CallInvoker.AsyncServerStreamingCall(__Method_Primes, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected override SumServiceClient NewInstance(ClientBaseConfiguration configuration)
+      protected override PrimesServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new SumServiceClient(configuration);
+        return new PrimesServiceClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static grpc::ServerServiceDefinition BindService(SumServiceBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(PrimesServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Sum, serviceImpl.Sum).Build();
+          .AddMethod(__Method_Primes, serviceImpl.Primes).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -145,9 +135,9 @@ namespace Prime {
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, SumServiceBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, PrimesServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Sum, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Prime.SumRequest, global::Prime.SumResponse>(serviceImpl.Sum));
+      serviceBinder.AddMethod(__Method_Primes, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Prime.NumberRequest, global::Prime.PrimesResponse>(serviceImpl.Primes));
     }
 
   }

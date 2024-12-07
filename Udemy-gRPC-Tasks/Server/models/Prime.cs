@@ -24,17 +24,17 @@ namespace Prime {
     static PrimeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgtQcmltZS5wcm90bxIFUHJpbWUiMAoJQXJndW1lbnRzEhAKCGZpcnN0TnVt",
-            "GAEgASgFEhEKCXNlY29uZE51bRgCIAEoBSIsCgpTdW1SZXF1ZXN0Eh4KBGFy",
-            "Z3MYASABKAsyEC5QcmltZS5Bcmd1bWVudHMiGgoLU3VtUmVzcG9uc2USCwoD",
-            "cmVzGAEgASgJMjwKClN1bVNlcnZpY2USLgoDU3VtEhEuUHJpbWUuU3VtUmVx",
-            "dWVzdBoSLlByaW1lLlN1bVJlc3BvbnNlIgBiBnByb3RvMw=="));
+            "CgtQcmltZS5wcm90bxIFUHJpbWUiGgoIQXJndW1lbnQSDgoGbnVtYmVyGAEg",
+            "ASgFIjIKDU51bWJlclJlcXVlc3QSIQoIYXJndW1lbnQYASABKAsyDy5Qcmlt",
+            "ZS5Bcmd1bWVudCIgCg5QcmltZXNSZXNwb25zZRIOCgZyZXN1bHQYASABKAUy",
+            "SgoNUHJpbWVzU2VydmljZRI5CgZQcmltZXMSFC5QcmltZS5OdW1iZXJSZXF1",
+            "ZXN0GhUuUHJpbWUuUHJpbWVzUmVzcG9uc2UiADABYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Prime.Arguments), global::Prime.Arguments.Parser, new[]{ "FirstNum", "SecondNum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Prime.SumRequest), global::Prime.SumRequest.Parser, new[]{ "Args" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Prime.SumResponse), global::Prime.SumResponse.Parser, new[]{ "Res" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Prime.Argument), global::Prime.Argument.Parser, new[]{ "Number" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Prime.NumberRequest), global::Prime.NumberRequest.Parser, new[]{ "Argument" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Prime.PrimesResponse), global::Prime.PrimesResponse.Parser, new[]{ "Result" }, null, null, null, null)
           }));
     }
     #endregion
@@ -42,16 +42,16 @@ namespace Prime {
   }
   #region Messages
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class Arguments : pb::IMessage<Arguments>
+  public sealed partial class Argument : pb::IMessage<Argument>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Arguments> _parser = new pb::MessageParser<Arguments>(() => new Arguments());
+    private static readonly pb::MessageParser<Argument> _parser = new pb::MessageParser<Argument>(() => new Argument());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Arguments> Parser { get { return _parser; } }
+    public static pb::MessageParser<Argument> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -67,7 +67,7 @@ namespace Prime {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Arguments() {
+    public Argument() {
       OnConstruction();
     }
 
@@ -75,59 +75,45 @@ namespace Prime {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Arguments(Arguments other) : this() {
-      firstNum_ = other.firstNum_;
-      secondNum_ = other.secondNum_;
+    public Argument(Argument other) : this() {
+      number_ = other.number_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Arguments Clone() {
-      return new Arguments(this);
+    public Argument Clone() {
+      return new Argument(this);
     }
 
-    /// <summary>Field number for the "firstNum" field.</summary>
-    public const int FirstNumFieldNumber = 1;
-    private int firstNum_;
+    /// <summary>Field number for the "number" field.</summary>
+    public const int NumberFieldNumber = 1;
+    private int number_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int FirstNum {
-      get { return firstNum_; }
+    public int Number {
+      get { return number_; }
       set {
-        firstNum_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "secondNum" field.</summary>
-    public const int SecondNumFieldNumber = 2;
-    private int secondNum_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int SecondNum {
-      get { return secondNum_; }
-      set {
-        secondNum_ = value;
+        number_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as Arguments);
+      return Equals(other as Argument);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Arguments other) {
+    public bool Equals(Argument other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FirstNum != other.FirstNum) return false;
-      if (SecondNum != other.SecondNum) return false;
+      if (Number != other.Number) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -135,8 +121,7 @@ namespace Prime {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FirstNum != 0) hash ^= FirstNum.GetHashCode();
-      if (SecondNum != 0) hash ^= SecondNum.GetHashCode();
+      if (Number != 0) hash ^= Number.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -155,13 +140,9 @@ namespace Prime {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FirstNum != 0) {
+      if (Number != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(FirstNum);
-      }
-      if (SecondNum != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SecondNum);
+        output.WriteInt32(Number);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -173,13 +154,9 @@ namespace Prime {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FirstNum != 0) {
+      if (Number != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(FirstNum);
-      }
-      if (SecondNum != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SecondNum);
+        output.WriteInt32(Number);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,11 +168,8 @@ namespace Prime {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FirstNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FirstNum);
-      }
-      if (SecondNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SecondNum);
+      if (Number != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Number);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,15 +179,12 @@ namespace Prime {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Arguments other) {
+    public void MergeFrom(Argument other) {
       if (other == null) {
         return;
       }
-      if (other.FirstNum != 0) {
-        FirstNum = other.FirstNum;
-      }
-      if (other.SecondNum != 0) {
-        SecondNum = other.SecondNum;
+      if (other.Number != 0) {
+        Number = other.Number;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -235,11 +206,7 @@ namespace Prime {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            FirstNum = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            SecondNum = input.ReadInt32();
+            Number = input.ReadInt32();
             break;
           }
         }
@@ -262,11 +229,7 @@ namespace Prime {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            FirstNum = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            SecondNum = input.ReadInt32();
+            Number = input.ReadInt32();
             break;
           }
         }
@@ -277,16 +240,16 @@ namespace Prime {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class SumRequest : pb::IMessage<SumRequest>
+  public sealed partial class NumberRequest : pb::IMessage<NumberRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SumRequest> _parser = new pb::MessageParser<SumRequest>(() => new SumRequest());
+    private static readonly pb::MessageParser<NumberRequest> _parser = new pb::MessageParser<NumberRequest>(() => new NumberRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<SumRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<NumberRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -302,7 +265,7 @@ namespace Prime {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SumRequest() {
+    public NumberRequest() {
       OnConstruction();
     }
 
@@ -310,45 +273,45 @@ namespace Prime {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SumRequest(SumRequest other) : this() {
-      args_ = other.args_ != null ? other.args_.Clone() : null;
+    public NumberRequest(NumberRequest other) : this() {
+      argument_ = other.argument_ != null ? other.argument_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SumRequest Clone() {
-      return new SumRequest(this);
+    public NumberRequest Clone() {
+      return new NumberRequest(this);
     }
 
-    /// <summary>Field number for the "args" field.</summary>
-    public const int ArgsFieldNumber = 1;
-    private global::Prime.Arguments args_;
+    /// <summary>Field number for the "argument" field.</summary>
+    public const int ArgumentFieldNumber = 1;
+    private global::Prime.Argument argument_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Prime.Arguments Args {
-      get { return args_; }
+    public global::Prime.Argument Argument {
+      get { return argument_; }
       set {
-        args_ = value;
+        argument_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as SumRequest);
+      return Equals(other as NumberRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(SumRequest other) {
+    public bool Equals(NumberRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Args, other.Args)) return false;
+      if (!object.Equals(Argument, other.Argument)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -356,7 +319,7 @@ namespace Prime {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (args_ != null) hash ^= Args.GetHashCode();
+      if (argument_ != null) hash ^= Argument.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -375,9 +338,9 @@ namespace Prime {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (args_ != null) {
+      if (argument_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(Args);
+        output.WriteMessage(Argument);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -389,9 +352,9 @@ namespace Prime {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (args_ != null) {
+      if (argument_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(Args);
+        output.WriteMessage(Argument);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -403,8 +366,8 @@ namespace Prime {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (args_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Args);
+      if (argument_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Argument);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -414,15 +377,15 @@ namespace Prime {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(SumRequest other) {
+    public void MergeFrom(NumberRequest other) {
       if (other == null) {
         return;
       }
-      if (other.args_ != null) {
-        if (args_ == null) {
-          Args = new global::Prime.Arguments();
+      if (other.argument_ != null) {
+        if (argument_ == null) {
+          Argument = new global::Prime.Argument();
         }
-        Args.MergeFrom(other.Args);
+        Argument.MergeFrom(other.Argument);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -444,10 +407,10 @@ namespace Prime {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (args_ == null) {
-              Args = new global::Prime.Arguments();
+            if (argument_ == null) {
+              Argument = new global::Prime.Argument();
             }
-            input.ReadMessage(Args);
+            input.ReadMessage(Argument);
             break;
           }
         }
@@ -470,10 +433,10 @@ namespace Prime {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (args_ == null) {
-              Args = new global::Prime.Arguments();
+            if (argument_ == null) {
+              Argument = new global::Prime.Argument();
             }
-            input.ReadMessage(Args);
+            input.ReadMessage(Argument);
             break;
           }
         }
@@ -484,16 +447,16 @@ namespace Prime {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class SumResponse : pb::IMessage<SumResponse>
+  public sealed partial class PrimesResponse : pb::IMessage<PrimesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SumResponse> _parser = new pb::MessageParser<SumResponse>(() => new SumResponse());
+    private static readonly pb::MessageParser<PrimesResponse> _parser = new pb::MessageParser<PrimesResponse>(() => new PrimesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<SumResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<PrimesResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -509,7 +472,7 @@ namespace Prime {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SumResponse() {
+    public PrimesResponse() {
       OnConstruction();
     }
 
@@ -517,45 +480,45 @@ namespace Prime {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SumResponse(SumResponse other) : this() {
-      res_ = other.res_;
+    public PrimesResponse(PrimesResponse other) : this() {
+      result_ = other.result_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SumResponse Clone() {
-      return new SumResponse(this);
+    public PrimesResponse Clone() {
+      return new PrimesResponse(this);
     }
 
-    /// <summary>Field number for the "res" field.</summary>
-    public const int ResFieldNumber = 1;
-    private string res_ = "";
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 1;
+    private int result_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Res {
-      get { return res_; }
+    public int Result {
+      get { return result_; }
       set {
-        res_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        result_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as SumResponse);
+      return Equals(other as PrimesResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(SumResponse other) {
+    public bool Equals(PrimesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Res != other.Res) return false;
+      if (Result != other.Result) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -563,7 +526,7 @@ namespace Prime {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Res.Length != 0) hash ^= Res.GetHashCode();
+      if (Result != 0) hash ^= Result.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -582,9 +545,9 @@ namespace Prime {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Res.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Res);
+      if (Result != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Result);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -596,9 +559,9 @@ namespace Prime {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Res.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Res);
+      if (Result != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Result);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -610,8 +573,8 @@ namespace Prime {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Res.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Res);
+      if (Result != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Result);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -621,12 +584,12 @@ namespace Prime {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(SumResponse other) {
+    public void MergeFrom(PrimesResponse other) {
       if (other == null) {
         return;
       }
-      if (other.Res.Length != 0) {
-        Res = other.Res;
+      if (other.Result != 0) {
+        Result = other.Result;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -647,8 +610,8 @@ namespace Prime {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Res = input.ReadString();
+          case 8: {
+            Result = input.ReadInt32();
             break;
           }
         }
@@ -670,8 +633,8 @@ namespace Prime {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Res = input.ReadString();
+          case 8: {
+            Result = input.ReadInt32();
             break;
           }
         }

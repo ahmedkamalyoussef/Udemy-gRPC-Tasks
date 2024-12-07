@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2BDE3779-AAAD-4DF7-A5B1-4232934C2A87}|Server\\Server.csproj|d:\\visual studio\\udemy-grpc-tasks\\udemy-grpc-tasks\\server\\services\\primeserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BDE3779-AAAD-4DF7-A5B1-4232934C2A87}|Server\\Server.csproj|solutionrelative:server\\services\\primeserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BDE3779-AAAD-4DF7-A5B1-4232934C2A87}|Server\\Server.csproj|d:\\visual studio\\udemy-grpc-tasks\\udemy-grpc-tasks\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2BDE3779-AAAD-4DF7-A5B1-4232934C2A87}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F1E91B2-B21B-4E6C-A35E-9AA3D94A6626}|Client\\Client.csproj|d:\\visual studio\\udemy-grpc-tasks\\udemy-grpc-tasks\\client\\client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0F1E91B2-B21B-4E6C-A35E-9AA3D94A6626}|Client\\Client.csproj|solutionrelative:client\\client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7CCB92F1-C1DF-461F-B7ED-72F22CBD75D0}|protos{7CCB92F1-C1DF-461F-B7ED-72F22CBD75D0}|D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Prime.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{7CCB92F1-C1DF-461F-B7ED-72F22CBD75D0}|protos{7CCB92F1-C1DF-461F-B7ED-72F22CBD75D0}|solutionrelative:Prime.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
@@ -27,6 +39,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PrimeServiceImp.cs",
+              "DocumentMoniker": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Server\\Services\\PrimeServiceImp.cs",
+              "RelativeDocumentMoniker": "Server\\Services\\PrimeServiceImp.cs",
+              "ToolTip": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Server\\Services\\PrimeServiceImp.cs*",
+              "RelativeToolTip": "Server\\Services\\PrimeServiceImp.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T06:41:25.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Server.csproj",
+              "DocumentMoniker": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Server\\Server.csproj",
+              "RelativeDocumentMoniker": "Server\\Server.csproj",
+              "ToolTip": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Server\\Server.csproj",
+              "RelativeToolTip": "Server\\Server.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-07T06:36:48.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Client.csproj",
+              "DocumentMoniker": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Client\\Client.csproj",
+              "RelativeDocumentMoniker": "Client\\Client.csproj",
+              "ToolTip": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Client\\Client.csproj",
+              "RelativeToolTip": "Client\\Client.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-07T06:36:35.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Prime.proto",
               "DocumentMoniker": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Prime.proto",
               "RelativeDocumentMoniker": "Prime.proto",
@@ -34,8 +85,7 @@
               "RelativeToolTip": "Prime.proto",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "cb4a8fc6-efe7-424a-b611-23adf22b568e.000046|",
-              "WhenOpened": "2024-12-07T05:56:21.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T05:56:21.35Z"
             }
           ]
         }
