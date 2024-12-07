@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7CCB92F1-C1DF-461F-B7ED-72F22CBD75D0}|protos{7CCB92F1-C1DF-461F-B7ED-72F22CBD75D0}|D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Prime.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{7CCB92F1-C1DF-461F-B7ED-72F22CBD75D0}|protos{7CCB92F1-C1DF-461F-B7ED-72F22CBD75D0}|solutionrelative:Prime.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Prime.proto",
+              "DocumentMoniker": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Prime.proto",
+              "RelativeDocumentMoniker": "Prime.proto",
+              "ToolTip": "D:\\Visual studio\\Udemy-gRPC-Tasks\\Udemy-gRPC-Tasks\\Prime.proto",
+              "RelativeToolTip": "Prime.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "cb4a8fc6-efe7-424a-b611-23adf22b568e.000046|",
+              "WhenOpened": "2024-12-07T05:56:21.35Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
