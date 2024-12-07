@@ -1,0 +1,12 @@
+syntax = "proto3";
+package greeting;
+
+message GreetRequest{
+  string name=1;
+}
+message GreetResponse{
+  string result=1;
+}
+service GreetingService{
+  rpc GreetWithDeadLine (GreetRequest)  returns (GreetResponse){} 
+}

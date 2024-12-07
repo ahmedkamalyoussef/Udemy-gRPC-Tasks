@@ -1,7 +1,9 @@
 ﻿using ComputeAverage;
+using Greeting;
 using Grpc.Core;
 using Prime;
 using Server.Services;
+using Sqrt;
 
 internal class Program
 {
@@ -17,6 +19,8 @@ internal class Program
                 {
                     PrimesService.BindService(new PrimeServiceImp()),
                     ComputeAverageService.BindService(new ComputeAverageServiceImp()),
+                    SqrtService.BindService(new SqrtServiceImp()),
+                    GreetingService.BindService(new GreetingServiceImp()),
                 },
                 Ports = { new ServerPort("localhost", port, ServerCredentials.Insecure) }
             };

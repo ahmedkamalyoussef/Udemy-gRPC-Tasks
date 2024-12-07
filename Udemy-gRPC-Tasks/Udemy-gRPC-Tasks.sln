@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protos", "protos", "{7CCB92
 	ProjectSection(SolutionItems) = preProject
 		Prime.proto = Prime.proto
 		ComputeAverage.proto = ComputeAverage.proto
+		sqrt.proto = sqrt.proto
+		greeting.proto = greeting.proto
 	EndProjectSection
 EndProject
 Global
