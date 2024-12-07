@@ -1,4 +1,5 @@
-﻿using Grpc.Core;
+﻿using ComputeAverage;
+using Grpc.Core;
 using Prime;
 using Server.Services;
 
@@ -12,7 +13,11 @@ internal class Program
         {
             s = new Grpc.Core.Server()
             {
-                Services = { PrimesService.BindService(new PrimeServiceImp()) },
+                Services =
+                {
+                    PrimesService.BindService(new PrimeServiceImp()),
+                    ComputeAverageService.BindService(new ComputeAverageServiceImp()),
+                },
                 Ports = { new ServerPort("localhost", port, ServerCredentials.Insecure) }
             };
             s.Start();

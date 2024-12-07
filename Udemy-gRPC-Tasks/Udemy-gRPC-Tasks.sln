@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protos", "protos", "{7CCB92F1-C1DF-461F-B7ED-72F22CBD75D0}"
 	ProjectSection(SolutionItems) = preProject
 		Prime.proto = Prime.proto
+		ComputeAverage.proto = ComputeAverage.proto
 	EndProjectSection
 EndProject
 Global

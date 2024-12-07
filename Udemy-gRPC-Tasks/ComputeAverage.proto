@@ -1,0 +1,15 @@
+syntax = "proto3";
+package ComputeAverage;
+
+message Argument{
+  int32 number =1;
+}
+message RequestNumber{
+  Argument argument=1;
+}
+message PrimesResponse{
+  int32 result=1;
+}
+service ComputeAverageService{
+  rpc ComputeAverage (stream RequestNumber)  returns (PrimesResponse){} 
+}
