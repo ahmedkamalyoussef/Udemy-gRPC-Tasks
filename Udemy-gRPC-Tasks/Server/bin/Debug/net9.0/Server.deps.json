@@ -10,6 +10,7 @@
         "dependencies": {
           "Google.Protobuf": "3.29.1",
           "Grpc": "2.46.6",
+          "Grpc.Reflection": "2.67.0",
           "Grpc.Tools": "2.68.1",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0"
         },
@@ -32,7 +33,7 @@
       },
       "Grpc.Core/2.46.6": {
         "dependencies": {
-          "Grpc.Core.Api": "2.46.6",
+          "Grpc.Core.Api": "2.67.0",
           "System.Memory": "4.5.3"
         },
         "runtime": {
@@ -69,14 +70,23 @@
           }
         }
       },
-      "Grpc.Core.Api/2.46.6": {
-        "dependencies": {
-          "System.Memory": "4.5.3"
-        },
+      "Grpc.Core.Api/2.67.0": {
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.46.6.0"
+            "fileVersion": "2.67.0.0"
+          }
+        }
+      },
+      "Grpc.Reflection/2.67.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.29.1",
+          "Grpc.Core.Api": "2.67.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Grpc.Reflection.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.67.0.0"
           }
         }
       },
@@ -112,12 +122,19 @@
       "path": "grpc.core/2.46.6",
       "hashPath": "grpc.core.2.46.6.nupkg.sha512"
     },
-    "Grpc.Core.Api/2.46.6": {
+    "Grpc.Core.Api/2.67.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Z7HJGqJYyKb53qfp1jf0wRDYs3sxOnkAFxXAW6q52LLmX/zxzjtFLI9eaWO5UC0weiWjn4iT1FzR+tj9qYZAMg==",
-      "path": "grpc.core.api/2.46.6",
-      "hashPath": "grpc.core.api.2.46.6.nupkg.sha512"
+      "sha512": "sha512-cL1/2f8kc8lsAGNdfCU25deedXVehhLA6GXKLLN4hAWx16XN7BmjYn3gFU+FBpir5yJynvDTHEypr3Tl0j7x/Q==",
+      "path": "grpc.core.api/2.67.0",
+      "hashPath": "grpc.core.api.2.67.0.nupkg.sha512"
+    },
+    "Grpc.Reflection/2.67.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/3a3FIZzcpT6uC08j+JfA41UMSXKpPnxAZh7yv+6r6MLDXlDj08DWrLkFv8FEVFSxT/1QYpD8r81JJYWhCUIRg==",
+      "path": "grpc.reflection/2.67.0",
+      "hashPath": "grpc.reflection.2.67.0.nupkg.sha512"
     },
     "Grpc.Tools/2.68.1": {
       "type": "package",

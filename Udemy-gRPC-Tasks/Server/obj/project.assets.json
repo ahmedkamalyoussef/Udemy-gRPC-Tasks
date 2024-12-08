@@ -60,11 +60,8 @@
           }
         }
       },
-      "Grpc.Core.Api/2.46.6": {
+      "Grpc.Core.Api/2.67.0": {
         "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.3"
-        },
         "compile": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
             "related": ".pdb;.xml"
@@ -72,6 +69,23 @@
         },
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Grpc.Reflection/2.67.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.27.0",
+          "Grpc.Core.Api": "2.67.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Grpc.Reflection.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Grpc.Reflection.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -165,27 +179,44 @@
         "runtimes/win-x86/native/grpc_csharp_ext.x86.dll"
       ]
     },
-    "Grpc.Core.Api/2.46.6": {
-      "sha512": "Z7HJGqJYyKb53qfp1jf0wRDYs3sxOnkAFxXAW6q52LLmX/zxzjtFLI9eaWO5UC0weiWjn4iT1FzR+tj9qYZAMg==",
+    "Grpc.Core.Api/2.67.0": {
+      "sha512": "cL1/2f8kc8lsAGNdfCU25deedXVehhLA6GXKLLN4hAWx16XN7BmjYn3gFU+FBpir5yJynvDTHEypr3Tl0j7x/Q==",
       "type": "package",
-      "path": "grpc.core.api/2.46.6",
+      "path": "grpc.core.api/2.67.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "grpc.core.api.2.46.6.nupkg.sha512",
+        "README.md",
+        "grpc.core.api.2.67.0.nupkg.sha512",
         "grpc.core.api.nuspec",
-        "lib/net45/Grpc.Core.Api.dll",
-        "lib/net45/Grpc.Core.Api.pdb",
-        "lib/net45/Grpc.Core.Api.xml",
-        "lib/netstandard1.5/Grpc.Core.Api.dll",
-        "lib/netstandard1.5/Grpc.Core.Api.pdb",
-        "lib/netstandard1.5/Grpc.Core.Api.xml",
+        "lib/net462/Grpc.Core.Api.dll",
+        "lib/net462/Grpc.Core.Api.pdb",
+        "lib/net462/Grpc.Core.Api.xml",
         "lib/netstandard2.0/Grpc.Core.Api.dll",
         "lib/netstandard2.0/Grpc.Core.Api.pdb",
         "lib/netstandard2.0/Grpc.Core.Api.xml",
         "lib/netstandard2.1/Grpc.Core.Api.dll",
         "lib/netstandard2.1/Grpc.Core.Api.pdb",
         "lib/netstandard2.1/Grpc.Core.Api.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Reflection/2.67.0": {
+      "sha512": "/3a3FIZzcpT6uC08j+JfA41UMSXKpPnxAZh7yv+6r6MLDXlDj08DWrLkFv8FEVFSxT/1QYpD8r81JJYWhCUIRg==",
+      "type": "package",
+      "path": "grpc.reflection/2.67.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.reflection.2.67.0.nupkg.sha512",
+        "grpc.reflection.nuspec",
+        "lib/net462/Grpc.Reflection.dll",
+        "lib/net462/Grpc.Reflection.pdb",
+        "lib/net462/Grpc.Reflection.xml",
+        "lib/netstandard2.0/Grpc.Reflection.dll",
+        "lib/netstandard2.0/Grpc.Reflection.pdb",
+        "lib/netstandard2.0/Grpc.Reflection.xml",
         "packageIcon.png"
       ]
     },
@@ -344,6 +375,7 @@
     "net9.0": [
       "Google.Protobuf >= 3.29.1",
       "Grpc >= 2.46.6",
+      "Grpc.Reflection >= 2.67.0",
       "Grpc.Tools >= 2.68.1",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0"
     ]
@@ -405,6 +437,10 @@
           "Grpc": {
             "target": "Package",
             "version": "[2.46.6, )"
+          },
+          "Grpc.Reflection": {
+            "target": "Package",
+            "version": "[2.67.0, )"
           },
           "Grpc.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

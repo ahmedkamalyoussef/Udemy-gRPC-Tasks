@@ -23,3 +23,4 @@ D:\Visual studio\Udemy-gRPC-Tasks\Udemy-gRPC-Tasks\Server\obj\Debug\net9.0\refin
 D:\Visual studio\Udemy-gRPC-Tasks\Udemy-gRPC-Tasks\Server\obj\Debug\net9.0\Server.pdb
 D:\Visual studio\Udemy-gRPC-Tasks\Udemy-gRPC-Tasks\Server\obj\Debug\net9.0\Server.genruntimeconfig.cache
 D:\Visual studio\Udemy-gRPC-Tasks\Udemy-gRPC-Tasks\Server\obj\Debug\net9.0\ref\Server.dll
+D:\Visual studio\Udemy-gRPC-Tasks\Udemy-gRPC-Tasks\Server\bin\Debug\net9.0\Grpc.Reflection.dll
